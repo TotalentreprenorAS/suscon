@@ -29,6 +29,6 @@ export default async function ProjectDetailPage({ params }: any) {
 
 export async function generateStaticParams() {
   return projects.map((project) => ({
-    slug: project.slug,
+    slug: project.slug.replace("/projects/", ""), // Just project-1 etc
   }));
 }
