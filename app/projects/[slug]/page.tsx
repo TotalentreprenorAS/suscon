@@ -1,6 +1,6 @@
-// app/projects/[slug]/page.tsx
 import { notFound } from "next/navigation";
 import Image from "next/image";
+
 const projects = [
   {
     title: "Sustainable Construction Project Development 1",
@@ -39,7 +39,8 @@ const projects = [
   },
 ];
 
-export default function ProjectDetailPage({
+// ✅ async here fixes the type issue
+export default async function ProjectDetailPage({
   params,
 }: {
   params: { slug: string };
@@ -56,11 +57,18 @@ export default function ProjectDetailPage({
           src="/rodion-kutsaiev-PEm_sLmJT-w-unsplash-1.avif"
           alt={project.title}
           className="w-full h-64 object-cover rounded-lg shadow"
-          width={500}
-          height={500}
+          width={800}
+          height={400}
         />
-        <p className="text-lg text-gray-700 mb-6">{project.description}</p>
+        <p className="text-lg text-gray-700 mt-6">{project.description}</p>
       </div>
     </section>
   );
+}
+
+// ✅ Required for static export
+export async function generateStaticParams() {
+  return projects.map((project) => ({
+    slug: project.slug,
+  }));
 }
