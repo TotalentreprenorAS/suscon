@@ -2,13 +2,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import { projects } from "../../data/projects";
 
-type PageProps = {
-  params: {
-    slug: string;
-  };
-};
-
-export default async function ProjectDetailPage({ params }: PageProps) {
+export default async function ProjectDetailPage({ params }: any) {
   try {
     const project = projects.find((p) => p.slug === params.slug);
 
