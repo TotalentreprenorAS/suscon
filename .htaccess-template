@@ -1,0 +1,15 @@
+RewriteEngine On
+
+# Serve static files directly if they exist
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Handle pretty URLs like /projects/project-1
+RewriteRule ^projects/([^/]+)$ /projects/$1.html [L]
+
+# Handle base URLs like /about → /about.html
+RewriteRule ^([^/]+)$ /$1.html [L]
+
+# Default fallback
+DirectoryIndex index.html
