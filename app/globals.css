@@ -1,10 +1,47 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 @theme {
-  --breakpoint-*: initial;
-  --breakpoint-sm: 480px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 976px;
   --color-main: #2c3e50;
   --color-logo: #159f43;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+@layer utilities {
+  .container {
+    margin: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+  }
+
+  /* xs (default) - full width with padding */
+
+  /* sm (640px) */
+  @media (min-width: 640px) {
+    .container {
+      max-width: 640px;
+    }
+  }
+
+  /* md (768px) */
+  @media (min-width: 768px) {
+    .container {
+      max-width: 768px;
+    }
+  }
+
+  /* lg (1024px) */
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 1024px;
+    }
+  }
 }

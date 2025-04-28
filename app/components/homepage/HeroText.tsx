@@ -20,7 +20,8 @@ function HeroText() {
 
 export default HeroText;
 
-<p>
+{
+  /* <p>
   The way we construct our living environment affects both nature and human
   well-being in various ways. We believe that the built environment can be
   durable while safeguarding the environment and human health. SUSCON offers
@@ -28,4 +29,5 @@ export default HeroText;
   for construction projects and everyday situations that affect our living
   environment. The centre is rooted in science and industry, and is comprised of
   engineers, architects, biologists, sociologists and technicians.
-</p>;
+</p>; */
+}

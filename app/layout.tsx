@@ -1,7 +1,6 @@
-// app/layout.tsx
 import "./globals.css";
-import React from "react";
 import NavigationBar from "./components/nav";
+import Footer from "./components/footer/Footer";
 
 export const metadata = {
   title: "Suscon - Sustainable Construction",
@@ -15,11 +14,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="no">
-      <body className="bg-gray-200 text-black">
-        <div className="grid min-h-screen grid-rows-[auto_1fr_auto] max-w-screen-xl mx-auto">
+      <body className="bg-gray-100 text-black font-sans">
+        <div className="grid min-h-screen grid-rows-[auto_1fr_auto]">
           <NavigationBar />
           <main>{children}</main>
-          <footer className="bg-gray-100 text-center py-4">Footer</footer>
+          <Footer />
         </div>
       </body>
     </html>
