@@ -12,12 +12,10 @@ export default async function ProjectDetailPage({ params }: any) {
       <section className={`${project.color} min-h-screen py-20 px-6`}>
         <div className="max-w-3xl mx-auto">
           <h1 className="text-4xl font-bold mb-6">{project.title}</h1>
-          <Image
+          <img
             src="/rodion-kutsaiev-PEm_sLmJT-w-unsplash-1.avif"
             alt={project.title}
             className="w-full h-64 object-cover rounded-lg shadow"
-            width={800}
-            height={400}
           />
           <p className="text-lg text-gray-700 mt-6">{project.description}</p>
         </div>
