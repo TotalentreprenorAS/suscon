@@ -1,72 +1,40 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import { projects } from "../../data/projects";
 
-const projects = [
-  {
-    title: "Sustainable Construction Project Development 1",
-    slug: "project-1",
-    color: "bg-rose-50",
-    description:
-      "This project explores sustainable building solutions using environmentally responsible design principles and technologies.",
-  },
-  {
-    title: "Sustainable Construction Project Development 2",
-    slug: "project-2",
-    color: "bg-amber-50",
-    description:
-      "This project explores sustainable building solutions using environmentally responsible design principles and technologies.",
-  },
-  {
-    title: "Sustainable Construction Project Development 3",
-    slug: "project-3",
-    color: "bg-green-50",
-    description:
-      "This project explores sustainable building solutions using environmentally responsible design principles and technologies.",
-  },
-  {
-    title: "Sustainable Construction Project Development 4",
-    slug: "project-4",
-    color: "bg-sky-50",
-    description:
-      "This project explores sustainable building solutions using environmentally responsible design principles and technologies.",
-  },
-  {
-    title: "Sustainable Construction Project Development 5",
-    slug: "project-5",
-    color: "bg-slate-50",
-    description:
-      "This project explores sustainable building solutions using environmentally responsible design principles and technologies.",
-  },
-];
+type PageProps = {
+  params: {
+    slug: string;
+  };
+};
 
-// ✅ async here fixes the type issue
-export default async function ProjectDetailPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const project = projects.find((p) => p.slug === params.slug);
+export default async function ProjectDetailPage({ params }: PageProps) {
+  try {
+    const project = projects.find((p) => p.slug === params.slug);
 
-  if (!project) return notFound();
+    if (!project) return notFound();
 
-  return (
-    <section className={`${project.color} min-h-screen py-20 px-6`}>
-      <div className="max-w-3xl mx-auto">
-        <h1 className="text-4xl font-bold mb-6">{project.title}</h1>
-        <Image
-          src="/rodion-kutsaiev-PEm_sLmJT-w-unsplash-1.avif"
-          alt={project.title}
-          className="w-full h-64 object-cover rounded-lg shadow"
-          width={800}
-          height={400}
-        />
-        <p className="text-lg text-gray-700 mt-6">{project.description}</p>
-      </div>
-    </section>
-  );
+    return (
+      <section className={`${project.color} min-h-screen py-20 px-6`}>
+        <div className="max-w-3xl mx-auto">
+          <h1 className="text-4xl font-bold mb-6">{project.title}</h1>
+          <Image
+            src="/rodion-kutsaiev-PEm_sLmJT-w-unsplash-1.avif"
+            alt={project.title}
+            className="w-full h-64 object-cover rounded-lg shadow"
+            width={800}
+            height={400}
+          />
+          <p className="text-lg text-gray-700 mt-6">{project.description}</p>
+        </div>
+      </section>
+    );
+  } catch (error) {
+    console.error("Error loading project:", error);
+    return notFound();
+  }
 }
 
-// ✅ Required for static export
 export async function generateStaticParams() {
   return projects.map((project) => ({
     slug: project.slug,
