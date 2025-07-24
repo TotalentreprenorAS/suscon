@@ -1,20 +1,25 @@
 function HeroText() {
   return (
-    <div className="w-full flex justify-end">
-      <div className="bg-main p-6 max-w-[600px]">
-        <h1 className="text-6xl font-bold text-white mb-5">
-          Sus<span className="text-logo">con</span>
-        </h1>
-        <p className="text-white text-2xl text-bold mb-4 font-bold">
-          Nordic centre for sustainable construction,
-        </p>
-        <p className="text-white text-xl">
-          SUSCON offers multidisciplinary research and consultancy services on
-          sustainable solutions for construction projects and everyday
-          situations that affect our living environment.
-        </p>
+    <section className="container">
+      <div className="flex">
+        <div className="flex flex-col justify-center">
+          <h1 className="text-5xl text-bold mb-4 font-bold">
+            Nordic centre for sustainable construction
+          </h1>
+          <p className="text-xl">
+            SUSCON offers multidisciplinary research and consultancy services on
+            sustainable solutions for construction projects and everyday
+            situations that affect our living environment.
+          </p>
+        </div>
+        <div className="flex justify-center">
+          <img
+            src="/images/suscon-sustainability-leaf.svg"
+            className="w-[600px] h-auto max-w-[800px]"
+          />
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 

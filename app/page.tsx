@@ -3,11 +3,7 @@ import HeroText from "./components/homepage/HeroText";
 export default function Page() {
   return (
     <>
-      <section className="relative h-[80vh] bg-[url('/rodion-kutsaiev-PEm_sLmJT-w-unsplash-1.avif')] bg-cover bg-center flex items-center justify-end">
-        <div className="p-8 rounded-lg text-white max-w-2xl text-center">
-          <HeroText />
-        </div>
-      </section>
+      <HeroText />
 
       <section className="container mx-auto px-5 py-20">
         <h2 className="text-3xl font-bold mb-4">Welcome to Suscon</h2>
