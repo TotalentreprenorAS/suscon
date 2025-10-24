@@ -2,38 +2,29 @@
 
 export const projects = [
   {
-    title: "Sustainable Construction Project Development 1",
+    title: "Gjennbruk av byggematerialer",
     slug: "project-1",
-    color: "bg-rose-50",
     description:
-      "This project explores sustainable building solutions using environmentally responsible design principles and technologies.",
+      " building solutions using environmentally responsible design principles and technologies.",
+      id: "L-03-B/751",
+      relatedAreaOfResearch: "Sustainable use and re-use of building materials"
   },
   {
-    title: "Sustainable Construction Project Development 2",
+    title: "Lavstråleprosjektet",
     slug: "project-2",
-    color: "bg-amber-50",
     description:
       "This project explores sustainable building solutions using environmentally responsible design principles and technologies.",
+      id: "L-07-B/771",
+      relatedAreaOfResearch: "Urban toxicology"
   },
   {
-    title: "Sustainable Construction Project Development 3",
+    title: "Bærekraftig massehåndtering",
     slug: "project-3",
     color: "bg-green-50",
     description:
       "This project explores sustainable building solutions using environmentally responsible design principles and technologies.",
-  },
-  {
-    title: "Sustainable Construction Project Development 4",
-    slug: "project-4",
-    color: "bg-sky-50",
-    description:
-      "This project explores sustainable building solutions using environmentally responsible design principles and technologies.",
-  },
-  {
-    title: "Sustainable Construction Project Development 5",
-    slug: "project-5",
-    color: "bg-slate-50",
-    description:
-      "This project explores sustainable building solutions using environmentally responsible design principles and technologies.",
+      id: "L-10/B-752",
+      relatedAreaOfResearch: "Mass excess utilization"
+
   },
 ];

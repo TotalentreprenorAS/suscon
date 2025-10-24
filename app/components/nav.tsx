@@ -1,20 +1,22 @@
 import React from "react";
+import Link from "next/link";
 
 const navigationItems = [
-  { label: "Home", href: "/" },
-  { label: "About us", href: "/about" },
-  // Add more links here if needed
+  { label: "Areas of research", href: "/areasofresearch" },
+  { label: "Projects", href: '/projects'},
+  { label: "Contact", href: '/contact'}  
 ];
 
 function NavigationBar(): React.JSX.Element {
   return (
-    // NavigationBar.tsx
-    <header className="absolute top-0 left-0 w-full z-20">
-      <nav className=" container flex justify-between items-center px-8 text-white">
+    <header className="bg-white w-full h-25">
+      <nav className="container flex justify-between items-center px-8 text-white">
+        <Link href="/">
         <img src="/images/suscon-logo.png" className="w-64" />
-        <ul className="flex gap-10">
+        </Link>
+        <ul className="flex gap-10 align-center">
           {navigationItems.map((item) => (
-            <li key={item.href}>
+            <li key={item.href} className="text-black">
               <a
                 href={item.href}
                 className="hover:underline text-xl font-semibold"
@@ -23,8 +25,7 @@ function NavigationBar(): React.JSX.Element {
               </a>
             </li>
           ))}
-        </ul>
-        <h2 className="font-semibold text-xl">Contact</h2>
+        </ul>h 
       </nav>
     </header>
   );

@@ -1,68 +1,42 @@
-import Link from "next/link";
+import { projects } from "../data/projects";
 
 export default function ProjectsPage() {
-  const projects = [
-    {
-      title: "Sustainable Construction Project Development 1",
-      slug: "/projects/project-1",
-      color: "bg-rose-50",
-    },
-    {
-      title: "Sustainable Construction Project Development 2",
-      slug: "/projects/project-2",
-      color: "bg-amber-50",
-    },
-    {
-      title: "Sustainable Construction Project Development 3",
-      slug: "/projects/project-3",
-      color: "bg-green-50",
-    },
-    {
-      title: "Sustainable Construction Project Development 4",
-      slug: "/projects/project-4",
-      color: "bg-sky-50",
-    },
-    {
-      title: "Sustainable Construction Project Development 5",
-      slug: "/projects/project-5",
-      color: "bg-slate-50",
-    },
-  ];
+
 
   return (
     <section className="container mx-auto px-4 py-20">
       <h1 className="text-4xl font-bold text-center mb-10">Our Projects</h1>
-      <p className="text-lg text-center text-gray-700 max-w-2xl mx-auto mb-12">
+      <p className="text-lg text-center text-gray-700 max-w-2xl mx-auto mb-12 font-semibold">
         Explore our sustainable construction initiatives designed to push
         innovation, reduce environmental impact, and shape a better tomorrow.
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 gap-10">
         {projects.map((project, index) => (
-          <Link href={project.slug} key={index}>
+          <div key={index}>
             <div
-              className={`${project.color} rounded-xl shadow-md overflow-hidden hover:shadow-lg transition border border-gray-200 cursor-pointer`}
+              className="rounded-xl max-w-[600px] mx-auto"
             >
-              <div className="h-48 w-full overflow-hidden">
-                <img
-                  src="/rodion-kutsaiev-PEm_sLmJT-w-unsplash-1.avif"
-                  alt={project.title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              <div className="p-6">
-                <h2 className="text-xl font-semibold text-gray-800 mb-2">
-                  {project.title}
+              <div className="flex">
+              <p className="text-xs text-gray-500"> ID: {project.id}</p>
+              </div> 
+              <div className="py-3 border-5 p-2 border-gray-300 gap-2">
+                <h2 className="text-xl font-semibold text-gray-800 text-center">
+                  {project.id} {project.title}
                 </h2>
-                <p className="text-gray-600 text-sm">
-                  This project explores sustainable building solutions using
-                  environmentally responsible design principles and
-                  technologies.
-                </p>
+                <div className="flex flex-col items-center mt-1">
+                {/* <p className="text-gray-600 text-sm">
+                 {project.description}
+                </p> */}
+                </div> 
+                <div className="flex justify-center mt-1">
+                {/* <Link href={`/projects/${project.slug}`} className="hover:underline"> More info
+                </Link> */}
+                <p className="text-sm text-gray-700"> Related areas of research: <span className="text-gray-500">{project.relatedAreaOfResearch}</span></p>
+                </div> 
               </div>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
     </section>

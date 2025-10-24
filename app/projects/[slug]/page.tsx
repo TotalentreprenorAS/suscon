@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import { projects } from "../../data/projects";
 
 export default async function ProjectDetailPage({ params }: any) {
