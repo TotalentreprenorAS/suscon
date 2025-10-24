@@ -14,7 +14,6 @@ function HeroText() {
             Let's build a sustainable future together
           </p>
         </div>
-          
       </div>
     </section>
   );
