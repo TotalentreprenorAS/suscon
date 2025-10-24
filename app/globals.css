@@ -1,54 +1,59 @@
-@import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+@import "tailwindcss";
 
-body {
-  font-family: "Lora", serif;
-}
-
-/* Apply Sen to all headings */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Sen", sans-serif;
-}
-
-@theme {
+/* Define CSS variables */
+:root {
   --color-main: #2c3e50;
   --color-logo: #159f43;
 }
 
+@layer base {
+  html {
+    font-family: "Source Sans 3", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Sen", sans-serif;
+  }
+}
+
 @layer utilities {
   .container {
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 1rem;
     padding-right: 1rem;
     width: 100%;
+    max-width: 1140px;
   }
 
-  /* xs (default) - full width with padding */
-
-  /* sm (640px) */
   @media (min-width: 640px) {
     .container {
       max-width: 640px;
     }
   }
 
-  /* md (768px) */
   @media (min-width: 768px) {
     .container {
       max-width: 768px;
     }
   }
 
-  /* lg (1024px) */
   @media (min-width: 1024px) {
     .container {
-      max-width: 1224px;
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .container {
+      max-width: 1140px; /* or 1024px if you want it tighter */
     }
   }
 }

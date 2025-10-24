@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export", // ✅ this enables static export in Next.js 13/14+
+  output: "export",
+  experimental: {
+    esmExternals: false,
+  },
 };
 
 export default nextConfig;

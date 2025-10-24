@@ -1,22 +1,21 @@
 function HeroText() {
   return (
-    <section className="container">
-      <div className="flex">
-        <div className="flex flex-col justify-center">
-          <h1 className="text-5xl text-bold mb-4 font-bold">
+    <section className="relative h-[80vh] bg-[url(/images/suscon-background.png)] bg-cover bg-center w-full text-white">
+      {/* Gradient Overlay (bottom to top) */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+
+      {/* Content */}
+      <div className="container relative z-10 flex items-end justify-center h-full pb-20">
+        <div className="flex flex-col gap-5">
+          <h1 className="text-6xl font-bold leading-[1.2]">
             Nordic centre for sustainable construction
           </h1>
-          <p className="text-xl">
-            SUSCON offers multidisciplinary research and consultancy services on
-            sustainable solutions for construction projects and everyday
-            situations that affect our living environment.
+          <p className="text-3xl font-semibold text-yellow-500">
+            Build a sustainable future together
           </p>
-        </div>
-        <div className="flex justify-center">
-          <img
-            src="/images/suscon-sustainability-leaf.svg"
-            className="w-[600px] h-auto max-w-[800px]"
-          />
+          <button className="py-3 px-6 bg-[#13AC9C] self-start font-bold text-xl rounded-lg">
+            Get to know us
+          </button>
         </div>
       </div>
     </section>
