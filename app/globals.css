@@ -22,6 +22,9 @@
   }
 }
 
+main { 
+  margin-top: 100px;
+}
 @layer utilities {
   .container {
     margin-left: auto;

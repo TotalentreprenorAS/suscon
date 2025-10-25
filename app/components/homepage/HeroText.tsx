@@ -1,19 +1,17 @@
 function HeroText() {
   return (
-    <section className="relative h-[50vh] bg-[url(/images/suscon-background.png)] bg-contain bg-bottom w-full text-white">
-      {/* Gradient Overlay (bottom to top) */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+    <section className="relative h-[70vh] bg-[url(/images/suscon-background.png)] bg-cover bg-center w-full text-white overflow-hidden">
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
 
       {/* Content */}
-      <div className="container relative z-10 flex items-end justify-center h-full pb-20">
-        <div className="flex flex-col gap-6">
-          <h1 className="text-5xl font-bold leading-[1.4]">
-            Nordic Centre for Sustainable Construction
-          </h1>
-          <p className="text-2xl font-semibold text-gray-300">
-            Let's build a sustainable future together
-          </p>
-        </div>
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 animate-fade-in">
+        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight max-w-4xl">
+          Nordic Centre for Sustainable Construction
+        </h1>
+        <p className="mt-4 text-lg md:text-2xl font-medium text-gray-200">
+          Let's build a sustainable future together
+        </p>
       </div>
     </section>
   );
