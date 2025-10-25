@@ -1,23 +1,37 @@
 import { BsTelephone } from "react-icons/bs";
+import { BsGeoAlt } from "react-icons/bs";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-200 text-black p-2 text-sm">
-      <div className="flex justify-between flex-wrap gap-5 container items-center p-2">
-        <div className="flex gap-2"> 
-          <h2 className=""> Address: </h2> 
-          <p> Conrads Mohrs veg 15, N-5072, Bergen, Norway </p>
-          </div> 
-          <div className="flex items-center gap-2"> 
-            <div className="flex items-center gap-2"> 
-          <BsTelephone/> 
-          <p>+47 40580085 </p>
-          </div>  
-          <p> Email: contact@suscon.eu</p> 
-        </div> 
-      </div> 
+    <footer className="bg-white text-gray-700 border-t border-gray-300 text-sm">
+      <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 py-4 px-6">
+        {/* Address */}
+        <div className="flex items-center gap-2 text-center sm:text-left flex-wrap justify-center sm:justify-start">
+          <BsGeoAlt className="text-rose-700 text-lg" />
+          <span className="font-semibold text-gray-900">Address:</span>
+          <p>Conrads Mohrs veg 15, N-5072, Bergen, Norway</p>
+        </div>
+
+        {/* Contact Info */}
+        <div className="flex items-center gap-4 text-center sm:text-left flex-wrap justify-center sm:justify-end">
+          <div className="flex items-center gap-2">
+            <BsTelephone className="text-rose-700 text-lg" />
+            <p className="text-gray-800 font-medium">+47 40580085</p>
+          </div>
+          <p>
+            <span className="font-semibold text-gray-900">Email:</span>{" "}
+            <a
+              href="mailto:contact@suscon.eu"
+              className="text-rose-700 hover:underline transition-all duration-200"
+            >
+              contact@suscon.eu
+            </a>
+          </p>
+        </div>
+      </div>
+      <div className="text-xs text-gray-500 mt-2 text-center border-t border-gray-300 py-2">
+        © {new Date().getFullYear()} Suscon. All rights reserved.
+      </div>
     </footer>
   );
 }
-
-
