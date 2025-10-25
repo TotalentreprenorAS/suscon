@@ -1,6 +1,6 @@
 function HeroText() {
   return (
-    <section className="relative h-[70vh] bg-[url(/images/suscon-background.png)] bg-cover bg-center w-full text-white overflow-hidden pt-[-20px">
+    <section className="relative h-[50vh] bg-[url(/images/suscon-background.png)] bg-cover bg-center w-full text-white overflow-hidden pt-[-20px">
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
 

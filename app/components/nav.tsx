@@ -13,7 +13,7 @@ export default function NavigationBar(): React.JSX.Element {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-white w-full shadow-md fixed top-0 left-0 z-50 h-25">
+    <header className="bg-gray-50 w-full shadow-md fixed top-0 left-0 z-50 h-25">
       <nav className="container mx-auto flex justify-between items-center px-6 py-4">
         {/* Logo */}
         <Link href="/">
