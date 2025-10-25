@@ -7,7 +7,7 @@ import {
   FaHome,
   FaCity,
   FaUser,
-  FaEnvelope
+  FaEnvelope,
 } from "react-icons/fa";
 
 // const topics = [
@@ -55,38 +55,35 @@ import {
 //   },
 // ];
 
-
-
-
-
-function ProjectCards({topics, index}: any) {
+function ProjectCards({ topics, index }: any) {
   return (
-    <div key={index} className="max-w-6xl mx-auto text-lg mb-5 flex">
-       <div className="bg-gray-700 w-[100px] h-full">
-      </div>
-      <div className="p-3 shadow-sm w-[250px]">
-        <div className="flex items-center gap-4 text-rose-700">
-          <h3 className="text-sm font-semibold">{topics.title}</h3>
-        </div>
-        <p className="text-gray-700 text-sm border-gray-300 border-b w-50">
+    <div
+      key={index}
+      className="relative w-[300px] h-[180px] sm:w-[280px] md:w-[300px] lg:w-[320px] mb-10"
+    >
+      {/* Background offset */}
+      <div className="absolute bottom-2 left-[-10px] bg-gray-700 w-full h-full rounded-md -z-10"></div>
+
+      {/* Card */}
+      <div className="p-4 bg-white shadow-lg rounded-md h-full flex flex-col justify-between">
+        {/* Title */}
+        <h3 className="text-rose-700 text-base font-semibold leading-snug">
+          {topics.title}
+        </h3>
+
+        {/* Text */}
+        <p className="text-gray-700 text-sm flex-grow border-b border-gray-200 pb-2 mt-1">
           {topics.text}
         </p>
-        <div className="flex flex-col mt-2"> 
-          {/* <div className="flex gap-1 items-center">
-         <FaUser size={12}/>
-         <p className="text-gray-700 text-sm">
-         {topics.person}
-        </p>
-        </div> */}
-         <div className="flex gap-1 items-center">
-         <FaEnvelope size={12}/>
-         <p className="text-gray-700 text-sm">
-          {topics.email}
-        </p>
-        </div> 
-        </div> 
+
+        {/* Email */}
+        <div className="flex items-center gap-2 mt-2 text-sm text-gray-700">
+          <FaEnvelope size={12} className="text-rose-700" />
+          <p>{topics.email}</p>
+        </div>
       </div>
-</div>
-  )}
+    </div>
+  );
+}
 
 export default ProjectCards;

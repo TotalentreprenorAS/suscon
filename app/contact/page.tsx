@@ -9,7 +9,7 @@ export default function ContactPage() {
         Meet the people behind Suscon
       </h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mt-10 justify-items-center">
+      <div className="flex gap-10 mt-10">
         {Team.map((t, index) => (
           <div key={index} className="relative max-w-xs mb-10">
             {/* Blue background stretched behind the whole card */}

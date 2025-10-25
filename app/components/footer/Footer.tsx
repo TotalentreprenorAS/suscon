@@ -3,7 +3,7 @@ import { BsGeoAlt } from "react-icons/bs";
 
 export default function Footer() {
   return (
-    <footer className="bg-white text-gray-700 border-t border-gray-300 text-sm">
+    <footer className="bg-gray-50 text-gray-700 border-t border-gray-300 text-sm">
       <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 py-4 px-6">
         {/* Address */}
         <div className="flex items-center gap-2 text-center sm:text-left flex-wrap justify-center sm:justify-start">
@@ -29,7 +29,7 @@ export default function Footer() {
           </p>
         </div>
       </div>
-      <div className="text-xs text-gray-500 mt-2 text-center border-t border-gray-300 py-2">
+      <div className="text-xs text-gray-500 mt-2 text-center border-t border-gray-300 py-2 bg-gray-50">
         © {new Date().getFullYear()} Suscon. All rights reserved.
       </div>
     </footer>
