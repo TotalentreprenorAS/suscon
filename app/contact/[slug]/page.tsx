@@ -1,6 +1,6 @@
 import { Team } from "../../data/team";
 import { notFound } from "next/navigation";
-import Image from "next/image";
+import ReactMarkdown from "react-markdown";
 export default function Page({ params }: any) {
   try {
     const team = Team.find((t) => t.slug === params.slug);
@@ -23,7 +23,15 @@ export default function Page({ params }: any) {
           </div>
         </div>
         <div className="mt-10">
-          <p className="text-md">{team.summary} </p>
+          <div className="text-md">
+            <ReactMarkdown>{team.summary}</ReactMarkdown>
+          </div>
+          <div className="text-md mt-5">
+            <ReactMarkdown>{team.summary2}</ReactMarkdown>
+          </div>
+          <div className="text-md mt-5">
+            <ReactMarkdown>{team.summary3}</ReactMarkdown>
+          </div>
         </div>
       </div>
     );
