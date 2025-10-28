@@ -18,13 +18,16 @@ export default function ContactPage() {
             {/* Card container */}
             <div className="bg-white shadow-lg overflow-hidden">
               {/* Image section */}
-              <div className="relative w-full h-96">
+              <Link
+                href={`/contact/${t.slug}`}
+                className="relative w-full h-96"
+              >
                 <img
                   src={t.image}
                   alt={t.name}
                   className="w-full h-full object-cover"
                 />
-              </div>
+              </Link>
 
               {/* Text content underneath */}
               <div className="p-4">
