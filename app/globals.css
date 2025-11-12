@@ -32,6 +32,24 @@ main {
   margin-top: 100px;
 }
 
+blockquote { 
+  position: relative;
+}
+
+blockquote::before {
+  position: absolute;
+  z-index: -10;
+  top: -70px;
+  left: -45px;
+  content: "“"; /* Opening double quote */
+  font-size: 8em;
+  color: rgb(170, 169, 169);
+  margin-right: 0.5em;
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
 @layer utilities {
   .container {
     margin-left: auto;

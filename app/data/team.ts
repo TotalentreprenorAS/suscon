@@ -25,7 +25,10 @@ export const Team = [
     image: "/eh.jpg",
     description: "Ellard is a researcher within Suscon.",
     summary:
-      "While nature already sets harsh conditions for the organisms living therein, human activities can add additional constraints to the natural environment. It is therefore essential to understand how we influence our environment if we want to construct a living environment that is both sustainable and safeguarding human health. I am an ecologist and environmental scientist, and have developed innovative tools to monitor ecosystem health and unraveled mechanisms by which human-induced stressors effect organisms and ecosystem processes. My key areas of expertise are: Toxicology(Chemical, Physical); Urban ecology; Biodiversity & Environmental Impact Assessments; Biotechnological Innovation; Proposal Development.",
+      "While nature already sets harsh conditions for the organisms living therein, human activities can add additional constraints to the natural environment.",
+    summary2: "It is therefore essential to understand how we influence our environment if we want to construct a living environment that is both sustainable and safeguarding human health.",
+    summary3: "I am an **ecologist and environmental scientist**, and have **developed** innovative tools to monitor ecosystem health and unraveled mechanisms by which human-induced stressors effect organisms and ecosystem processes.",
+    summary4: "**My key areas of expertise are**: Toxicology(Chemical, Physical); Urban ecology; Biodiversity & Environmental Impact Assessments; Biotechnological Innovation; Proposal Development."
   },
   {
     name: "Bart van den Berg",
@@ -35,7 +38,9 @@ export const Team = [
     slug: "bartberg",
     image: "/bb.jpg",
     description: "Bart is the technical wheel within Suscon.",
-    summary: "",
+    summary: "With an associate in Front-End Development, I serve as the technical engine at Suscon building scalable, user-friendly solutions for both internal and external use. ",
+    summary2: "Coming from a background in sports and health, I recognize the growing need for innovation to drive sustainable concepts in the world we call home.",
+    summary3: "Now is the time to build for the future, to create an innovative and sustainable world for the generation that follows."
   },
   {
     name: "Niklas Selbu",
